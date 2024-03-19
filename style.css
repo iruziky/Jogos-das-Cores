@@ -1,0 +1,94 @@
+body{
+	margin: 0;
+}
+.letras{
+	position: relative;
+	color: white;
+	font-family: candara;
+	margin: 0;
+}
+.centralizar{
+	display: flex;
+	justify-content: center;
+}
+.quadrados{
+	background-color: #1f1f1f;
+	width: 450px;
+	height: 300px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 0;
+	grid-row-gap: 0;
+	position: relative;
+	top: 2%;
+}
+.quadradomenor{
+	user-select: none;
+	background-color: white;
+	border: 10px solid #1f1f1f;
+	border-radius: 30px;
+	width: 150px;
+	height: 150px;
+}
+#cima{
+	background-color: 	#26838d;
+	width: 100%;
+	height: 25%;
+}
+#meio{
+	display: flex;
+	align-items: center; /* centraliza verticalmente */
+	width: 100%;
+	height: 5%;
+}
+#inicio{	
+	outline: none;
+	color: #26838d;
+	font-size: 20px;
+	left: 35%;
+	border: 1px solid #ccc;
+	background-color: #fff;	
+}
+#baixo{
+	background-color: 	#1f1f1f;
+	width: 100%;
+	height: 70%;
+}
+.parabens {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	text-align: center;
+}
+
+.parabens h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.parabens p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.parabens button {
+  background-color: #008000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+p {
+	user-select: none;
+}
+h2 {
+	user-select: none;
+}

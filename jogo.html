@@ -1,0 +1,110 @@
+<html>
+
+<head>		
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+</head>
+
+<body>	
+	<div id="cima">
+		<p class="centralizar letras" style="font-size: 30px">THE GREAT</p>
+		<p class="centralizar letras" id="cores" style="font-size: 50px">RGB(34, 5, 171)</p>
+		<p class="centralizar letras" style="font-size: 30px">GUESSING GAME</p>
+	</div>
+
+	<div id="meio">
+		<button type="text" class="letras" id="inicio" onclick="iniciar()">NEW COLORS</button>
+	</div>
+
+	<div class="centralizar" id="baixo">
+		<div class="quadrados">
+			<div onclick="resposta('1')" id="op1" class="quadradomenor centralizar"></div>
+			<div onclick="resposta('2')" id="op2" class="quadradomenor centralizar"></div>
+			<div onclick="resposta('3')" id="op3" class="quadradomenor centralizar"></div>
+			<div onclick="resposta('4')" id="op4" class="quadradomenor centralizar"></div>
+			<div onclick="resposta('5')" id="op5" class="quadradomenor centralizar"></div>
+			<div onclick="resposta('6')" id="op6" class="quadradomenor centralizar"></div>
+		</div>
+	</div>
+	  <div id="mensagem" class="parabens">
+		<h2>Congratulations!</h2>
+	  	<p>You hit the color!</p>
+	  	<button id="jogar-novamente">Play Again</button>
+	  </div>
+
+</body>
+
+<script>
+	var posicaocerta;
+	var estado = 0;
+	var acertou = false;
+
+	function iniciar(){
+		acertou = false;
+		// Criando um vetor para os valores da cor
+		var vetorrgb = [];
+		// "estado = 1" significa que o jogo começou
+		estado = 1;
+		// definindo onde estará a opção certa
+		posicaocerta = Math.floor(Math.random() * (+7 - +1)) + +1;
+		
+		for(var i = 1; i < 7; i++){
+			var opcao = 'op'+i;
+			/*Varrendo cada quadrado*/
+
+			for(var y = 0; y < 3; y++){
+				vetorrgb[y] = Math.floor(Math.random() * ("256" - "1") + "1");
+				/*Gerando valores para uma cor, preenchendo o vetorrgb*/
+			}
+
+			if (posicaocerta == i) {
+				document.getElementById('cores').innerHTML = 'RGB('+vetorrgb[0]+','+vetorrgb[1]+','+vetorrgb[2]+')';
+				/*Atualizando o parágrafo que dá as indicações sobre a cor*/
+			}
+
+			var a = document.getElementById(opcao);
+			a.innerHTML = '';
+			var cor = "rgb("+vetorrgb[0]+","+vetorrgb[1]+","+vetorrgb[2]+")";
+			a.style.backgroundColor = cor;
+			/*Pegando o respectivo quadrado
+			Apagando vestígios da rodada anterior
+			Criando variável com os valores da cor
+			Pintando o respectivo quadrado*/
+		}
+	}
+	function resposta (entrada){
+		if (estado == 1 && !acertou) {
+			var a = document.getElementById('op'+entrada);
+			var b = document.getElementById('op'+posicaocerta);
+			/*Verifica se a partida começou
+			Caso contrário, nada acontece
+			Pega o quadrado selecionado e bota em uma variável
+			Pega o quadrado certo e bota em uma variável*/
+			if (a == b) {
+				acertou = true; // seta a variável de controle para true
+				var divParabens = document.getElementById("mensagem");
+		  		divParabens.style.display = "block";
+		    
+		    	var botaoJogarNovamente = document.getElementById("jogar-novamente");
+		    	botaoJogarNovamente.addEventListener("click", function() {
+		      	divParabens.style.display = "none";
+		      	iniciar();
+		    	});
+			} else {
+			  var src = document.getElementById('op' + entrada);
+			  // Verifica se já existe um elemento img nesta opção
+			  if (src.getElementsByTagName('img').length > 0) {
+			    // Remove o elemento img existente
+			    src.removeChild(src.getElementsByTagName('img')[0]);
+			  }
+			  var img = document.createElement("img");
+			  img.src = "https://i.postimg.cc/wjRpWgK2/image.png";
+			  src.appendChild(img);
+			}
+		}
+	}
+	window.onload = function() {
+		iniciar();
+	}
+</script>
+</html>

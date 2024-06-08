@@ -2,8 +2,7 @@
 
 Um divertido jogo para testar sua capacidade de distinção entre as diferentes combinações do padrão RGB
 
-![Captura de tela_8-6-2024_92510_](https://github.com/iruziky/Jogos-das-Cores/assets/112575824/6b2f8523-d8c9-4b2a-a631-176ebb8c3d51)
-
+![Captura de tela_8-6-2024_9318_](https://github.com/iruziky/Jogos-das-Cores/assets/112575824/3d583d54-0453-4176-9fae-78e25245a136)
 
 # Como Jogar
 
@@ -20,10 +19,6 @@ O meio da página possui 6 quadrados com cores distintas, e seu objetivo é iden
 2 - Descompacte o arquivo
 
 3 - Clique duas vezes em calculadora.html
-
-# Observação
-
-Algum bug pode acontecer caso a imagem hospedada em https://postimg.cc/Bj3kbWnP (contém spoiler) não esteja mais disponível, mas basta atualizar para outro link ao final do arquivo scripts.js
 
 # Futuras Alterações
 

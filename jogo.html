@@ -6,18 +6,22 @@
 </head>
 
 <body>	
+	<!-- Div para cabeçalho -->
 	<div id="cima">
 		<p class="centralizar letras" style="font-size: 30px">THE GREAT</p>
 		<p class="centralizar letras" id="cores" style="font-size: 50px">RGB(34, 5, 171)</p>
 		<p class="centralizar letras" style="font-size: 30px">GUESSING GAME</p>
 	</div>
 
+	<!-- Botão para iniciar novo jogo -->
 	<div id="meio">
 		<button type="text" class="letras" id="inicio" onclick="iniciar()">NEW COLORS</button>
 	</div>
 
+	<!-- Div para os quadrados de cores -->
 	<div class="centralizar" id="baixo">
 		<div class="quadrados">
+			<!-- Cada quadrado é um elemento clicável -->
 			<div onclick="resposta('1')" id="op1" class="quadradomenor centralizar"></div>
 			<div onclick="resposta('2')" id="op2" class="quadradomenor centralizar"></div>
 			<div onclick="resposta('3')" id="op3" class="quadradomenor centralizar"></div>
@@ -26,6 +30,11 @@
 			<div onclick="resposta('6')" id="op6" class="quadradomenor centralizar"></div>
 		</div>
 	</div>
+
+    <!-- Sobreposição para bloquear interações -->
+    <div class="overlay" id="overlay"></div>
+
+	<!-- Div para mensagem de parabéns -->
 	<div id="mensagem" class="parabens">
 		<h2>Congratulations!</h2>
 		<p>You hit the color!</p>
@@ -34,6 +43,7 @@
 
 </body>
 
-<script src="script.js"></script>
+<!-- Incluindo o script JavaScript externo -->
+<script src="scripts.js"></script>
 
 </html>

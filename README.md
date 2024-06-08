@@ -2,6 +2,9 @@
 
 Um divertido jogo para testar sua capacidade de distinção entre as diferentes combinações do padrão RGB
 
+![Captura de tela_8-6-2024_92510_](https://github.com/iruziky/Jogos-das-Cores/assets/112575824/6b2f8523-d8c9-4b2a-a631-176ebb8c3d51)
+
+
 # Como Jogar
 
 No topo da página, irão aparecer 3 números

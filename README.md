@@ -20,7 +20,7 @@ O meio da página possui 6 quadrados com cores distintas, e seu objetivo é iden
 
 # Observação
 
-Algum bug pode acontecer caso a imagem hospedada em https://postimg.cc/Bj3kbWnP não esteja mais disponível, mas basta atualizar para outro link ao final do arquivo scripts.js
+Algum bug pode acontecer caso a imagem hospedada em https://postimg.cc/Bj3kbWnP (contém spoiler) não esteja mais disponível, mas basta atualizar para outro link ao final do arquivo scripts.js
 
 # Futuras Alterações
 

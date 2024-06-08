@@ -1,17 +1,24 @@
-body{
+/* Resetando margens do body */
+body {
 	margin: 0;
 }
-.letras{
+
+/* Estilos para textos */
+.letras {
 	position: relative;
 	color: white;
 	font-family: candara;
 	margin: 0;
 }
-.centralizar{
+
+/* Centralizando elementos com flexbox */
+.centralizar {
 	display: flex;
 	justify-content: center;
 }
-.quadrados{
+
+/* Estilos para o contêiner dos quadrados */
+.quadrados {
 	background-color: #1f1f1f;
 	width: 450px;
 	height: 300px;
@@ -22,7 +29,9 @@ body{
 	position: relative;
 	top: 2%;
 }
-.quadradomenor{
+
+/* Estilos para cada quadrado */
+.quadradomenor {
 	user-select: none;
 	background-color: white;
 	border: 10px solid #1f1f1f;
@@ -30,54 +39,79 @@ body{
 	width: 150px;
 	height: 150px;
 }
-#cima{
-	background-color: 	#26838d;
+
+/* Estilos para a seção superior */
+#cima {
+	background-color: #26838d;
 	width: 100%;
 	height: 25%;
 }
-#meio{
+
+/* Estilos para a seção do meio */
+#meio {
 	display: flex;
-	align-items: center; /* centraliza verticalmente */
+	align-items: center;
 	width: 100%;
 	height: 5%;
 }
-#inicio{	
+
+/* Estilos para o botão de início */
+#inicio {
 	outline: none;
 	color: #26838d;
 	font-size: 20px;
 	left: 35%;
 	border: 1px solid #ccc;
-	background-color: #fff;	
+	background-color: #fff;
 }
-#baixo{
-	background-color: 	#1f1f1f;
+
+/* Estilos para a seção inferior */
+#baixo {
+	background-color: #1f1f1f;
 	width: 100%;
 	height: 70%;
 }
-.parabens {
-	display: none;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: #fff;
-	padding: 20px;
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-	text-align: center;
-	z-index: 999;
+
+/* Estilos para a sobreposição */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    display: none; 
+    z-index: 999; 
 }
 
+/* Estilos para a div de parabéns */
+.parabens {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 1000; 
+}
+
+/* Estilos para o título dentro da div de parabéns */
 .parabens h2 {
   font-size: 24px;
   margin-bottom: 10px;
 }
 
+/* Estilos para o parágrafo dentro da div de parabéns */
 .parabens p {
   font-size: 18px;
   margin-bottom: 20px;
 }
 
+/* Estilos para o botão dentro da div de parabéns */
 .parabens button {
   background-color: #008000;
   color: #fff;
@@ -87,9 +121,12 @@ body{
   font-size: 16px;
   cursor: pointer;
 }
+
+/* Desabilitando seleção de texto para parágrafos e títulos */
 p {
 	user-select: none;
 }
+
 h2 {
 	user-select: none;
 }
